@@ -1,0 +1,38 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Merchant OCR",
+      "description": "PDF Text Reading API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "172.31.190.13:8080",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Pdf",
+        "description": "API for users in the system"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["multipart/form-data"],
+    "paths": {
+        "/api/v1/upload/pdf": {
+          "post": {
+            "consumes": ["multipart/form-data"],
+            "description": "Create and submit text in system",
+            "parameters": [
+              {
+                "name": "file",
+                "in": "formData",
+                "type": "file",
+                "description": "Data that we want to create"
+              }
+            ]
+          }
+        }
+      }
+  }
